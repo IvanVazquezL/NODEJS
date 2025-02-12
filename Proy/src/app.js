@@ -24,8 +24,14 @@ const john = createPerson(obj);
 console.log(john);
 */
 
+/*
 const { getPokemonById } = require('./getPokemonById');
+const pokemon = getPokemonById(1)
+    .then(pokemon => console.log(pokemon));
+*/
 
-console.log(getPokemonById(1, (pokemon) => {
-    console.log(pokemon);
-}));
+const { buildLogger } = require('../plugins');
+
+const logger = buildLogger('app.js');
+logger.log('Hola mundo');
+logger.error('algo malo');
