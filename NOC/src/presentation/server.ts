@@ -1,5 +1,11 @@
 import { CheckService } from "../domain/use-cases/checks/check-service";
+import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource";
+import { LogRepositoryImp } from "../infrastructure/repositories/log-implementation.repository";
 import { CronService } from "./cron/cron-service";
+
+const fileSystemLogRepository = new LogRepositoryImp(
+    new FileSystemDatasource()
+);
 
 export class Server {
     static start() {
@@ -8,10 +14,11 @@ export class Server {
             '*/5 * * * * *',
             () => {
                 const cS = new CheckService(
+                    fileSystemLogRepository,
                     () => console.log('success'),
                     (error) => console.log(error)
                 );
-                cS.execute('http://localhost:3000/posts');
+                cS.execute('https://google.com');
                 console.log('5 seconds');
             }
         );

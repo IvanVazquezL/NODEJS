@@ -2,4 +2,7 @@ node_modules
 /Typescript/node_modules
 /Multiplication/node_modules
 /Multiplication/outputs
+/NOC/logs
+/NOC/.env
 coverage
+
