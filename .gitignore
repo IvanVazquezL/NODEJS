@@ -6,5 +6,7 @@ node_modules
 /NOC/.env
 /NOC/mongo
 /NOC/postgres
+/NOC/mongo-test
+/NOC/postgres-test
 coverage
 
