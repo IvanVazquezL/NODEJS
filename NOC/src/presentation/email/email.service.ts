@@ -43,7 +43,7 @@ export class EmailService {
             });
 
             return true;
-        } catch (error) {
+        } catch (error) { 
             return false;
         }
     }

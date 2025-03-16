@@ -4,5 +4,7 @@ node_modules
 /Multiplication/outputs
 /NOC/logs
 /NOC/.env
+/NOC/mongo
+/NOC/postgres
 coverage
 
