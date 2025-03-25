@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { TodosController } from "./controller";
-import { todo } from "node:test";
 
 export class TodoRoutes {
     static get routes(): Router {
