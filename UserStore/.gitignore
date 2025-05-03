@@ -6,6 +6,7 @@
 .env
 
 mongo/
+!src/data/mongo/
 postgres/
 node_modules/
 dist/
